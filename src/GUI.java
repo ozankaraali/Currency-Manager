@@ -1,12 +1,18 @@
 import javax.swing.*;
+import javax.swing.table.AbstractTableModel;
 import java.awt.*;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.TreeMap;
 
 /**
  * Created by ozan on 6/6/17.
  */
+
 public class GUI {
     public GUI() {
         setupUI();
@@ -19,28 +25,91 @@ public class GUI {
     private JTextField convertedMoneyTextField;
     private JComboBox rateTableComboBox;
     private JComboBox conversionSComboBox;
-    private JTable conversionTable;
+    private JTable ratesTable;
     private JPanel conversionPanel;
+    private String[][]data;
+    private class CustomTableModel extends AbstractTableModel {
+        private final String[] columnNames = {"Currency", "Value"};
 
+
+        @Override
+        public boolean isCellEditable(int rowIndex, int columnIndex) {
+            return false;
+        }
+
+        @Override
+        public int getRowCount() {
+            return data.length;
+        }
+
+        @Override
+        public int getColumnCount() {
+            return columnNames.length;
+        }
+
+        @Override
+        public Object getValueAt(int rowIndex, int columnIndex) {
+            return data[rowIndex][columnIndex];
+        }
+
+        @Override
+        public String getColumnName(int columnIndex) {
+            return columnNames[columnIndex];
+        }
+    }
+    private void initTableModel(String baseValue){
+        TreeMap<String,Double> currMap = Main.getRateTable(baseValue,1);
+        String[] keys = new String[currMap.size()];
+        Double[] values = new Double[currMap.size()];
+        int index = 0;
+        for (HashMap.Entry<String, Double> mapEntry : currMap.entrySet()) {
+            keys[index] = mapEntry.getKey();
+            values[index] = mapEntry.getValue();
+            index++;
+        }
+        data=new String[Main.currencies().size()-1][2];
+        for(int i = 0; i < currMap.size(); i++) {
+            // path, uptime, pid, name
+            data[i][0] = keys[i];
+            data[i][1] = values[i].toString();
+        }
+    }
+    private void convertCurrency(){
+        try {
+            String first =conversionFComboBox.getSelectedItem().toString();
+            String second = conversionSComboBox.getSelectedItem().toString();
+            convertedMoneyTextField.setText(String.valueOf(Math.round((Double.parseDouble(moneyToConvertTextField.getText())*Main.getRate(first,second))*10000.0)/10000.0));
+        }
+        catch (Exception e1){
+            convertedMoneyTextField.setText("Error!");
+        }
+    }
     private void setupUI() {
         ItemListener cBListener = new ItemListener() {
             @Override
             public void itemStateChanged(ItemEvent e) {
-                try {
-                    String first =conversionFComboBox.getSelectedItem().toString();
-                    String second = conversionSComboBox.getSelectedItem().toString();
-                    convertedMoneyTextField.setText(String.valueOf(Math.round((Double.parseDouble(moneyToConvertTextField.getText())*Main.getRate(first,second))*10000.0)/10000.0));
-                }
-                catch (Exception e1){
-                    convertedMoneyTextField.setText("Error!");
-                    e1.printStackTrace();
-                }
+                convertCurrency();
+            }
+        };
+        KeyListener keyListener = new KeyListener() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
+                convertCurrency();
             }
         };
         //GENERAL PANEL
         generalPanel = new JPanel();
         generalPanel.setLayout(new BorderLayout(0, 0));
-        generalPanel.setPreferredSize(new Dimension(300, 300));
+        generalPanel.setPreferredSize(new Dimension(300, 650));
 
         //MAKE IT TABBED
         tabbedPane1 = new JTabbedPane();
@@ -61,6 +130,7 @@ public class GUI {
         gbc.gridy = 0;
         gbc.anchor = GridBagConstraints.WEST;
         conversionPanel.add(moneyToConvertTextField, gbc);
+        moneyToConvertTextField.addKeyListener(keyListener);
 
         //CONVERSION PANEL - CURRENCIES
         conversionFComboBox = new JComboBox();
@@ -95,6 +165,7 @@ public class GUI {
         gbc.fill = GridBagConstraints.HORIZONTAL;
         DefaultComboBoxModel<String> comboBoxModelS = new DefaultComboBoxModel<String>(currencies.toArray(new String[currencies.size()]));
         conversionSComboBox.setModel(comboBoxModelS);
+        conversionSComboBox.setSelectedIndex(1);
         conversionPanel.add(conversionSComboBox, gbc);
         conversionSComboBox.addItemListener(cBListener);
 
@@ -102,20 +173,19 @@ public class GUI {
         ratesPanel.setLayout(new BorderLayout(0, 0));
         tabbedPane1.addTab("Rates", ratesPanel);
 
-        //TODO00.01
         ItemListener rBListener = new ItemListener() {
             @Override
             public void itemStateChanged(ItemEvent e) {
-                /*try {
-                    String first =conversionFComboBox.getSelectedItem().toString();
-                    String second = conversionSComboBox.getSelectedItem().toString();
-                    convertedMoneyTextField.setText(String.valueOf(Math.round((Double.parseDouble(moneyToConvertTextField.getText())*Main.getRate(first,second))*10000.0)/10000.0));
+                try {
+                    initTableModel(rateTableComboBox.getSelectedItem().toString());
+                    CustomTableModel ratesTableModel = new CustomTableModel();
+                    ratesTable.setModel(ratesTableModel);
                 }
                 catch (Exception e1){
-                    convertedMoneyTextField.setText("Error!");
                     e1.printStackTrace();
-                }*/
+                }
             }
+
         };
 
         final JPanel rateTopBarPanel = new JPanel();
@@ -131,8 +201,12 @@ public class GUI {
         final JPanel rateCenterTablePanel = new JPanel();
         rateCenterTablePanel.setLayout(new BorderLayout(0, 0));
         ratesPanel.add(rateCenterTablePanel, BorderLayout.CENTER);
-        conversionTable = new JTable();
-        rateCenterTablePanel.add(conversionTable, BorderLayout.CENTER);
+
+        initTableModel(rateTableComboBox.getSelectedItem().toString());
+        CustomTableModel ratesTableModel = new CustomTableModel();
+        ratesTable = new JTable();
+        rateCenterTablePanel.add(ratesTable, BorderLayout.CENTER);
+        ratesTable.setModel(ratesTableModel);
 
         final JPanel aboutPanel = new JPanel();
         aboutPanel.setLayout(new BorderLayout(0, 0));
@@ -141,7 +215,7 @@ public class GUI {
         final JLabel aboutLabel = new JLabel();
         aboutLabel.setHorizontalAlignment(0);
         aboutLabel.setHorizontalTextPosition(0);
-        aboutLabel.setText("<html>Currency Manager 1.0.0<br>Ozan KARAALİ 2017 - MIT License<br>API: Fixer.io</html>");
+        aboutLabel.setText("<html>Currency Manager 1.0.1<br>Ozan KARAALİ 2017 - MIT License<br>API: Fixer.io<br>github.com/ozankaraali/Currency-Manager</html>");
         aboutPanel.add(aboutLabel, BorderLayout.CENTER);
     }
 

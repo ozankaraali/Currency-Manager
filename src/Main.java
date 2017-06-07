@@ -51,7 +51,7 @@ public class Main {
         Collections.sort(retn);
         return retn;
     }
-    public static HashMap<String,Double> getRateTable(String base,double amountOfMoney){
+    public static TreeMap<String,Double> getRateTable(String base,double amountOfMoney){
         JSONObject object = null;
         String jsonData = "";
         BufferedReader br = null;
@@ -79,7 +79,7 @@ public class Main {
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
-        HashMap<String, Double> map = new HashMap<>();
+        TreeMap<String, Double> map = new TreeMap<>();
         JSONObject jObject = new JSONObject(object.getJSONObject("rates").toString());
         Iterator<?> keys = jObject.keys();
 
@@ -89,7 +89,6 @@ public class Main {
             map.put(key, value*amountOfMoney);
 
         }
-
         return map;
     }
 
