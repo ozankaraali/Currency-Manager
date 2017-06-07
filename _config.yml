@@ -1,4 +1,4 @@
-title: SystemMonitor
-description: SystemMonitor is a system monitoring application that can run on every Desktop OS with a single code and single executable.
+title: Currency Manager
+description: Currency Manager is a simple program that gathers currency rates from Fixer.io and makes calculations in between currencies and shows rate tables.
 show_downloads: false
 theme: jekyll-theme-minimal
