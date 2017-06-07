@@ -6,7 +6,11 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2722c0b6-5f98-42a6-a489-483dac6f8479" name="Default" comment="" />
+    <list default="true" id="2722c0b6-5f98-42a6-a489-483dac6f8479" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI.java" afterPath="$PROJECT_DIR$/src/GUI.java" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,10 +25,11 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
+            <state relative-caret-position="720">
               <caret line="81" column="46" lean-forward="false" selection-start-line="81" selection-start-column="46" selection-end-line="81" selection-end-column="46" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#354#355#0" expanded="false" />
+                <element signature="e#409#410#0" expanded="false" />
                 <element signature="method#currencies#0;class#Main#0" expanded="false" />
               </folding>
             </state>
@@ -34,30 +39,22 @@
       <file leaf-file-name="GUI.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="217" column="151" lean-forward="false" selection-start-line="217" selection-start-column="112" selection-end-line="217" selection-end-column="151" />
+            <state relative-caret-position="166">
+              <caret line="223" column="56" lean-forward="false" selection-start-line="223" selection-start-column="56" selection-end-line="223" selection-end-column="56" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="class#CustomTableModel#0;class#GUI#0" expanded="false" />
-                <element signature="e#1015#1016#0" expanded="true" />
-                <element signature="e#1051#1052#0" expanded="true" />
-                <element signature="e#1105#1106#0" expanded="true" />
-                <element signature="e#1147#1148#0" expanded="true" />
-                <element signature="e#1204#1205#0" expanded="true" />
-                <element signature="e#1253#1254#0" expanded="true" />
-                <element signature="e#1338#1339#0" expanded="true" />
-                <element signature="e#1396#1397#0" expanded="true" />
-                <element signature="e#1470#1471#0" expanded="true" />
-                <element signature="e#1525#1526#0" expanded="true" />
                 <element signature="method#initTableModel#0;class#GUI#0" expanded="false" />
                 <element signature="method#convertCurrency#0;class#GUI#0" expanded="false" />
-                <element signature="class#2784:2937" expanded="false" />
-                <element signature="e#2877#2878#0" expanded="true" />
-                <element signature="e#2926#2927#0" expanded="true" />
-                <element signature="class#2977:3294" expanded="false" />
-                <element signature="e#3234#3235#0" expanded="true" />
-                <element signature="e#3283#3284#0" expanded="true" />
-                <element signature="method#itemStateChanged#0;class#6205:6683" expanded="false" />
+                <element signature="class#2673:2826" expanded="false" />
+                <element signature="class#2866:3183" expanded="false" />
+                <element signature="class#3920:4151" expanded="false" />
+                <element signature="e#4008#4009#0" expanded="true" />
+                <element signature="e#4075#4076#0" expanded="true" />
+                <element signature="e#4662#4670#0" expanded="true" />
+                <element signature="e#5914#5922#0" expanded="true" />
+                <element signature="method#itemStateChanged#0;class#6381:6859" expanded="false" />
+                <element signature="e#7175#7183#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -77,7 +74,11 @@
       <find>keyListe</find>
       <find>String first =conversionFComboBox.getSelectedItem().toString();</find>
       <find>conversionSComboBox.getSelectedItem()</find>
+      <find>convertText</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -119,8 +120,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -149,7 +149,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -597,27 +598,27 @@
       <workItem from="1496783101538" duration="798000" />
       <workItem from="1496832930525" duration="926000" />
       <workItem from="1496848024006" duration="5485000" />
+      <workItem from="1496863220181" duration="549000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7209000" />
+    <option name="totallyTimeSpent" value="7758000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-1" width="1366" height="741" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970452" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32866043" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32970452" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32866043" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -649,13 +650,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/GUI.java</url>
-          <line>72</line>
+          <line>69</line>
           <properties />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/GUI.java</url>
-          <line>65</line>
+          <line>62</line>
           <properties />
           <option name="timeStamp" value="4" />
         </line-breakpoint>
@@ -671,92 +672,11 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#currencies#0;class#Main#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2208">
-          <caret line="138" column="27" lean-forward="false" selection-start-line="138" selection-start-column="27" selection-end-line="138" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="class#CustomTableModel#0;class#GUI#0" expanded="false" />
-            <element signature="e#1015#1016#0" expanded="true" />
-            <element signature="e#1051#1052#0" expanded="true" />
-            <element signature="e#1105#1106#0" expanded="true" />
-            <element signature="e#1147#1148#0" expanded="true" />
-            <element signature="e#1204#1205#0" expanded="true" />
-            <element signature="e#1253#1254#0" expanded="true" />
-            <element signature="e#1338#1339#0" expanded="true" />
-            <element signature="e#1396#1397#0" expanded="true" />
-            <element signature="e#1470#1471#0" expanded="true" />
-            <element signature="e#1525#1526#0" expanded="true" />
-            <element signature="method#initTableModel#0;class#GUI#0" expanded="false" />
-            <element signature="method#convertCurrency#0;class#GUI#0" expanded="false" />
-            <element signature="class#2784:2937" expanded="false" />
-            <element signature="e#2877#2878#0" expanded="true" />
-            <element signature="e#2926#2927#0" expanded="true" />
-            <element signature="class#2977:3294" expanded="false" />
-            <element signature="e#3234#3235#0" expanded="true" />
-            <element signature="e#3283#3284#0" expanded="true" />
-            <element signature="method#itemStateChanged#0;class#6205:6683" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#currencies#0;class#Main#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2208">
-          <caret line="138" column="27" lean-forward="false" selection-start-line="138" selection-start-column="27" selection-end-line="138" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="class#CustomTableModel#0;class#GUI#0" expanded="false" />
-            <element signature="e#1015#1016#0" expanded="true" />
-            <element signature="e#1051#1052#0" expanded="true" />
-            <element signature="e#1105#1106#0" expanded="true" />
-            <element signature="e#1147#1148#0" expanded="true" />
-            <element signature="e#1204#1205#0" expanded="true" />
-            <element signature="e#1253#1254#0" expanded="true" />
-            <element signature="e#1338#1339#0" expanded="true" />
-            <element signature="e#1396#1397#0" expanded="true" />
-            <element signature="e#1470#1471#0" expanded="true" />
-            <element signature="e#1525#1526#0" expanded="true" />
-            <element signature="method#initTableModel#0;class#GUI#0" expanded="false" />
-            <element signature="method#convertCurrency#0;class#GUI#0" expanded="false" />
-            <element signature="class#2784:2937" expanded="false" />
-            <element signature="e#2877#2878#0" expanded="true" />
-            <element signature="e#2926#2927#0" expanded="true" />
-            <element signature="class#2977:3294" expanded="false" />
-            <element signature="e#3234#3235#0" expanded="true" />
-            <element signature="e#3283#3284#0" expanded="true" />
-            <element signature="method#itemStateChanged#0;class#6205:6683" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
+        <state relative-caret-position="720">
           <caret line="81" column="46" lean-forward="false" selection-start-line="81" selection-start-column="46" selection-end-line="81" selection-end-column="46" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#354#355#0" expanded="false" />
+            <element signature="e#409#410#0" expanded="false" />
             <element signature="method#currencies#0;class#Main#0" expanded="false" />
           </folding>
         </state>
@@ -764,30 +684,124 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
+        <state relative-caret-position="2144">
           <caret line="217" column="151" lean-forward="false" selection-start-line="217" selection-start-column="112" selection-end-line="217" selection-end-column="151" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="class#CustomTableModel#0;class#GUI#0" expanded="false" />
-            <element signature="e#1015#1016#0" expanded="true" />
-            <element signature="e#1051#1052#0" expanded="true" />
-            <element signature="e#1105#1106#0" expanded="true" />
-            <element signature="e#1147#1148#0" expanded="true" />
-            <element signature="e#1204#1205#0" expanded="true" />
-            <element signature="e#1253#1254#0" expanded="true" />
-            <element signature="e#1338#1339#0" expanded="true" />
-            <element signature="e#1396#1397#0" expanded="true" />
-            <element signature="e#1470#1471#0" expanded="true" />
-            <element signature="e#1525#1526#0" expanded="true" />
             <element signature="method#initTableModel#0;class#GUI#0" expanded="false" />
             <element signature="method#convertCurrency#0;class#GUI#0" expanded="false" />
-            <element signature="class#2784:2937" expanded="false" />
-            <element signature="e#2877#2878#0" expanded="true" />
-            <element signature="e#2926#2927#0" expanded="true" />
-            <element signature="class#2977:3294" expanded="false" />
-            <element signature="e#3234#3235#0" expanded="true" />
-            <element signature="e#3283#3284#0" expanded="true" />
-            <element signature="method#itemStateChanged#0;class#6205:6683" expanded="false" />
+            <element signature="class#2673:2826" expanded="false" />
+            <element signature="class#2866:3183" expanded="false" />
+            <element signature="class#3920:4151" expanded="false" />
+            <element signature="e#4008#4009#0" expanded="true" />
+            <element signature="e#4075#4076#0" expanded="true" />
+            <element signature="e#4662#4670#0" expanded="true" />
+            <element signature="e#5914#5922#0" expanded="true" />
+            <element signature="method#itemStateChanged#0;class#6381:6859" expanded="false" />
+            <element signature="e#7175#7183#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#354#355#0" expanded="false" />
+            <element signature="e#409#410#0" expanded="false" />
+            <element signature="method#currencies#0;class#Main#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2208">
+          <caret line="138" column="27" lean-forward="false" selection-start-line="138" selection-start-column="27" selection-end-line="138" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="class#CustomTableModel#0;class#GUI#0" expanded="false" />
+            <element signature="method#initTableModel#0;class#GUI#0" expanded="false" />
+            <element signature="method#convertCurrency#0;class#GUI#0" expanded="false" />
+            <element signature="class#2673:2826" expanded="false" />
+            <element signature="class#2866:3183" expanded="false" />
+            <element signature="class#3920:4151" expanded="false" />
+            <element signature="e#4008#4009#0" expanded="true" />
+            <element signature="e#4075#4076#0" expanded="true" />
+            <element signature="e#4662#4670#0" expanded="true" />
+            <element signature="e#5914#5922#0" expanded="true" />
+            <element signature="method#itemStateChanged#0;class#6381:6859" expanded="false" />
+            <element signature="e#7175#7183#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#354#355#0" expanded="false" />
+            <element signature="e#409#410#0" expanded="false" />
+            <element signature="method#currencies#0;class#Main#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2208">
+          <caret line="138" column="27" lean-forward="false" selection-start-line="138" selection-start-column="27" selection-end-line="138" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="class#CustomTableModel#0;class#GUI#0" expanded="false" />
+            <element signature="method#initTableModel#0;class#GUI#0" expanded="false" />
+            <element signature="method#convertCurrency#0;class#GUI#0" expanded="false" />
+            <element signature="class#2673:2826" expanded="false" />
+            <element signature="class#2866:3183" expanded="false" />
+            <element signature="class#3920:4151" expanded="false" />
+            <element signature="e#4008#4009#0" expanded="true" />
+            <element signature="e#4075#4076#0" expanded="true" />
+            <element signature="e#4662#4670#0" expanded="true" />
+            <element signature="e#5914#5922#0" expanded="true" />
+            <element signature="method#itemStateChanged#0;class#6381:6859" expanded="false" />
+            <element signature="e#7175#7183#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="81" column="46" lean-forward="false" selection-start-line="81" selection-start-column="46" selection-end-line="81" selection-end-column="46" />
+          <folding>
+            <element signature="e#354#355#0" expanded="false" />
+            <element signature="e#409#410#0" expanded="false" />
+            <element signature="method#currencies#0;class#Main#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="223" column="56" lean-forward="false" selection-start-line="223" selection-start-column="56" selection-end-line="223" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="class#CustomTableModel#0;class#GUI#0" expanded="false" />
+            <element signature="method#initTableModel#0;class#GUI#0" expanded="false" />
+            <element signature="method#convertCurrency#0;class#GUI#0" expanded="false" />
+            <element signature="class#2673:2826" expanded="false" />
+            <element signature="class#2866:3183" expanded="false" />
+            <element signature="class#3920:4151" expanded="false" />
+            <element signature="e#4008#4009#0" expanded="true" />
+            <element signature="e#4075#4076#0" expanded="true" />
+            <element signature="e#4662#4670#0" expanded="true" />
+            <element signature="e#5914#5922#0" expanded="true" />
+            <element signature="method#itemStateChanged#0;class#6381:6859" expanded="false" />
+            <element signature="e#7175#7183#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -1,10 +1,7 @@
 import javax.swing.*;
 import javax.swing.table.AbstractTableModel;
 import java.awt.*;
-import java.awt.event.ItemEvent;
-import java.awt.event.ItemListener;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
+import java.awt.event.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.TreeMap;
@@ -124,6 +121,15 @@ public class GUI {
         moneyToConvertTextField = new JTextField();
         moneyToConvertTextField.setColumns(8);
         moneyToConvertTextField.setText("Your Money");
+        moneyToConvertTextField.addFocusListener(new FocusListener(){
+            @Override
+            public void focusGained(FocusEvent e){
+                moneyToConvertTextField.setText("");
+            }
+            public void focusLost(FocusEvent e) {
+
+            }
+        });
         GridBagConstraints gbc;
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
@@ -215,7 +221,7 @@ public class GUI {
         final JLabel aboutLabel = new JLabel();
         aboutLabel.setHorizontalAlignment(0);
         aboutLabel.setHorizontalTextPosition(0);
-        aboutLabel.setText("<html>Currency Manager 1.0.1<br>Ozan KARAALİ 2017 - MIT License<br>API: Fixer.io<br>github.com/ozankaraali/Currency-Manager</html>");
+        aboutLabel.setText("<html>Currency Manager 1.0.2<br>Ozan KARAALİ 2017 - MIT License<br>API: Fixer.io<br>github.com/ozankaraali/Currency-Manager</html>");
         aboutPanel.add(aboutLabel, BorderLayout.CENTER);
     }
 
@@ -229,6 +235,7 @@ public class GUI {
         frame.setContentPane(new GUI().generalPanel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
+        frame.setLocationRelativeTo(null);
         frame.setVisible(true);
 
     }
