@@ -1,3 +1,5 @@
+package currencyManager;
+
 import jdk.nashorn.api.scripting.URLReader;
 import org.json.JSONObject;
 import java.io.BufferedReader;
@@ -44,6 +46,7 @@ public class Main {
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
+
         Object[] arr = object.getJSONObject("rates").keySet().toArray();
         String[] arry = Arrays.copyOf(arr, arr.length+1, String[].class);
         arry[arr.length]=object.getString("base");
